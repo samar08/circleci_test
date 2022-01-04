@@ -1,0 +1,11 @@
+jobs:
+  build:
+    machine:
+      image: ubuntu-2004:202111-02
+    steps:
+      - checkout
+      - run:
+          name: installing aws cli
+          command:
+            sudo apt-get update
+            sudo apt-get install awscli
