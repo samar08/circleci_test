@@ -16,7 +16,7 @@ jobs:
           command: ssh ec2-user@ec2-13-235-13-153.ap-south-1.compute.amazonaws.com sudo systemctl start containerbuild-regionsrv
       - run:
           name: buidling image in ec2 instance
-          command: ssh ec2-user@ec2-13-235-13-153.ap-south-1.compute.amazonaws.com sudo docker build -t custom_sles_image2 --network host /home/ec2-user/docker_images/custom_sles_image/dockerfile_folder/
+          command: ssh ec2-user@ec2-13-235-13-153.ap-south-1.compute.amazonaws.com sudo docker build -t custom_sles_image --network host /home/ec2-user/docker_images/custom_sles_image/dockerfile_folder/
 
 workflows:
   version: 2
